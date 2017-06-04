@@ -24,6 +24,9 @@
     <link href="css/grayscale.css" rel="stylesheet">
     <link href="css/rockout.css" rel="stylesheet">
 
+    <!-- Images grid
+    <link rel="stylesheet" href="src/images-grid.css">-->
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -170,12 +173,48 @@
             </div>
         </div>
     </section>
-        <!-- Bands Section -->
+
+    <!-- Bands Section -->
     <section id="bands" class="content-section text-center">
-        <div class="calendar-section">
+        <div class="bands-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Secção Bandas</h2>
+                <div class="row">
+                    <!-- Band Wall -->
+                    <div class="col-lg-4 col-lg-offset-2">
+
+                    </div>
+                    <!-- Band Search and Info -->
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="bandInput" placeholder="Nome da Banda">
+                            <div id="bandList" style="width:400px; position:absolute; background-color:#FFFFFF; border:1px solid #CCCCCC; padding:5px; display:none"></div>
+                        </div>
+                        <button class="btn btn-default" onclick="submitForm()">Buscar</button>
+                        <!-- TEST -->
+                        <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+                        <script>
+                            var bands='[{"name": "Tesseract"},{"name": "Rammstein"}]';
+                            $(document).on('keyup', '#bandInput', function(e) {
+                                var numcar=$(this).val().length;
+                                var timer;
+                                clearTimeout(timer);
+                                var ms = 300; // milliseconds
+                                var key = this.value;
+                                timer = setTimeout(function() {
+                                    $("#bandList").html("");
+                                    $("#bandList").hide();
+                                    if(numcar>2) {
+                                        $.each($.parseJSON(bands), function() {
+                                            if(this.name.toLowerCase().indexOf(key.toLowerCase()) >= 0){
+                                                $("#bandList").append("<p class='keyFinal' >"+this.name+"</p>");
+                                            }
+                                        });
+                                        $("#bandList").show();
+                                    } //FIN TIMER
+                                }, ms);
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -223,6 +262,9 @@
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Images grid
+    <script src="src/images-grid.js"></script>-->
 
 </body>
 
