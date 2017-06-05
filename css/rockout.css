@@ -1,0 +1,23 @@
+.navbar-rockout a {
+  color: white;
+}
+
+.text-copyright p {
+  font-size: 15px;
+  padding-top: 50px;
+  margin-bottom: 0;
+}
+
+.carousel-inner .item img {
+    overflow-y: hidden;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.carousel-inner .item h3 {
+    text-shadow: 2px 1px 1px #000;
+}
+
+#events.content-section {
+    padding-top: 80px;
+}

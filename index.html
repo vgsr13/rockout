@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>RockOut</title>
+
+    <title>Rockout</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -21,6 +22,10 @@
 
     <!-- Theme CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/rockout.css" rel="stylesheet">
+
+    <!-- Images grid
+    <link rel="stylesheet" href="src/images-grid.css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,14 +39,14 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top navbar-rockout" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                <a class="navbar-brand page-scroll " href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Portal</span> Rockout
                 </a>
             </div>
 
@@ -53,13 +58,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Eventos</a>
+                        <a class="page-scroll" href="#events">Eventos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Bandas</a>
+                        <a class="page-scroll" href="#calendar">Calendário</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Sobre o Portal</a>
+                        <a class="page-scroll" href="#bands">Bandas</a>    
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contato</a>
@@ -77,10 +82,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">RockOut</h1>
-                        <p class="intro-text">O portal de divulgação das novas bandas de Rock!
+                        <h1 class="brand-heading">Rockout</h1>
+                        <p class="intro-text">O portal de divulgação de eventos de Rock!
                             <br>Procure pelos próximos eventos e novas bandas,
-                            <br>Cadastre seu evento ou sua banda.</p>
+                            <br>Cadastre seu evento ou sua banda!</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -89,59 +94,119 @@
             </div>
         </div>
     </header>
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+
+    <!-- Events Section -->
+    <section id="events" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div id="carousel-rockout" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-rockout" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-rockout" data-slide-to="1"></li>
+                        <li data-target="#carousel-rockout" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-rockout" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-rockout" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>    
                 </div>
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Sobre o Portal RockOut</h2>
-                <p>O Portal RockOut foi crido para você, fã do Rock, que está em busca de um novo som, uma nova banda para curtir um Rock na cidade de Belo Horizonte.<!--<a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.--></p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="content-section text-center">
+        <div class="calendar-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Seção Calendário</h2>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+    <!-- Bands Section -->
+    <section id="bands" class="content-section text-center">
+        <div class="bands-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Band Wall -->
+                    <div class="col-lg-4 col-lg-offset-2">
+
+                    </div>
+                    <!-- Band Search and Info -->
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="bandInput" placeholder="Nome da Banda">
+                            <div id="bandList" style="width:400px; position:absolute; background-color:#FFFFFF; border:1px solid #CCCCCC; padding:5px; display:none"></div>
+                        </div>
+                        <button class="btn btn-default" onclick="submitForm()">Buscar</button>
+                        <!-- TEST -->
+                        <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+                        <script>
+                            var bands='[{"name": "Tesseract"},{"name": "Rammstein"}]';
+                            $(document).on('keyup', '#bandInput', function(e) {
+                                var numcar=$(this).val().length;
+                                var timer;
+                                clearTimeout(timer);
+                                var ms = 300; // milliseconds
+                                var key = this.value;
+                                timer = setTimeout(function() {
+                                    $("#bandList").html("");
+                                    $("#bandList").hide();
+                                    if(numcar>2) {
+                                        $.each($.parseJSON(bands), function() {
+                                            if(this.name.toLowerCase().indexOf(key.toLowerCase()) >= 0){
+                                                $("#bandList").append("<p class='keyFinal' >"+this.name+"</p>");
+                                            }
+                                        });
+                                        $("#bandList").show();
+                                    } //FIN TIMER
+                                }, ms);
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2016</p>
+        <div id="contact" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contate o Portal Rockout</h2>
+                    <p>Envie seu email para cadastrar uma banda ou evento, ou para fazer sugestões!</p>
+                    <p><a href="mailto:feedback@rockmail.com">portalrockout@rockmail.com</a>
+                    </p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://twitter.com/PortalRockout" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/PortalRockout" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/PortalRockout" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                        </li>
+                    </ul>
+                </div>                    
+            </div>
+        </div>
+        <div class="row">    
+            <div class="container text-center text-copyright">
+                <p>Copyright &copy; TIS - Portal de Bandas 2017</p>
+            </div>
         </div>
     </footer>
 
@@ -154,12 +219,18 @@
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/carousel.js"></script>
+    
+    <!-- Let this one always on bottom -->
+    <script src="js/main.js"></script>
 
+    <!-- Images grid
+    <script src="src/images-grid.js"></script>--> 
+  
 </body>
-
+  
 </html>
